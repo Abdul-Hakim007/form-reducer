@@ -1,0 +1,7 @@
+.form {
+    width: 450px;
+    border: 1px solid cyan;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(188, 225, 225);
+}
