@@ -9,7 +9,7 @@ const ReducerForm = () => {
     email: "",
     password: "",
     address: "",
-    secondAddress: "",
+    addressTwo: "",
     city: "",
     state: "",
     zip: 0,
@@ -30,20 +30,20 @@ const ReducerForm = () => {
           ...state,
           password: action.payload.value,
         };
-      case 'FIRST_ADDRESS':
+      case 'ADDRESS':
         return {
           ...state,
-          first_address: action.payload.value,
+          address: action.payload.value,
         };
-      case 'SECOND_ADDRESS':
+      case 'ADDRESSTWO':
         return {
           ...state,
-          second_address: action.payload.value,
+          addressTwo: action.payload.value,
         };
       case 'CITY':
         return {
           ...state,
-          password: action.payload.value,
+          city: action.payload.value,
         };
       case 'STATE':
         return {
@@ -99,7 +99,7 @@ const ReducerForm = () => {
         <Form.Group className="mb-3" controlId="formGridAddress1">
           <Form.Label>Address</Form.Label>
           <Form.Control placeholder="1234 Main St" onBlur={(e) => dispatch({
-            type: 'FIRST_ADDRESS',
+            type: 'ADDRESS',
             payload: { value: e.target.value }
           })} />
         </Form.Group>
@@ -107,7 +107,7 @@ const ReducerForm = () => {
         <Form.Group className="mb-3" controlId="formGridAddress2">
           <Form.Label>Address 2</Form.Label>
           <Form.Control placeholder="Apartment, studio, or floor" onBlur={(e) => dispatch({
-            type: 'SECOND_ADDRESS',
+            type: 'ADDRESSTWO',
             payload: { value: e.target.value }
           })} />
         </Form.Group>
